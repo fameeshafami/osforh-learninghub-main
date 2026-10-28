@@ -1,0 +1,229 @@
+/* Footer Component - 1st Image Card Model with Pure Black BG */
+.footer-wrap-container {
+  padding: 45px 24px 35px;
+  background: var(--bg, #f8fafc);
+  display: flex;
+  justify-content: center;
+}
+
+.footer-card {
+  width: 100%;
+  max-width: 1380px;
+  background: #000000;
+  border-radius: 28px;
+  padding: 68px 65px 40px;
+  color: #ffffff;
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.7);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* Subtle background accent glow */
+.footer-card::before {
+  content: "";
+  position: absolute;
+  top: -120px;
+  left: 20%;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(0, 103, 56, 0.22) 0%, transparent 70%);
+  filter: blur(60px);
+  pointer-events: none;
+}
+
+/* 4-Column Layout */
+.footer-main-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1.2fr 1.1fr;
+  gap: 45px;
+  align-items: flex-start;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 55px;
+}
+
+/* Column 1: Brand & Socials */
+.footer-brand-col {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.footer-logo-badge {
+  background: #ffffff;
+  padding: 4px 10px;
+  border-radius: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 172px;
+  height: 54px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+.footer-logo-badge img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform: scale(2.3);
+  display: block;
+}
+
+.footer-brand-desc {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #cbd5e1;
+  max-width: 290px;
+  margin: 0;
+}
+
+.footer-social-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.footer-social-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f1f5f9;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-social-btn:hover {
+  background: #006738;
+  color: #ffffff;
+  border-color: #006738;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 103, 56, 0.4);
+}
+
+/* Links Columns */
+.footer-nav-col h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 20px;
+  letter-spacing: -0.01em;
+  font-family: var(--display, 'Sora', sans-serif);
+}
+
+.footer-nav-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-nav-col ul li a {
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.25s ease;
+  display: inline-block;
+}
+
+.footer-nav-col ul li a:hover {
+  color: #ffffff;
+  transform: translateX(4px);
+}
+
+/* Connect Column */
+.footer-connect-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.footer-connect-item {
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 1.5;
+  transition: color 0.25s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-connect-item:hover {
+  color: #ffffff;
+}
+
+.footer-connect-item svg {
+  color: #38bdf8;
+  flex-shrink: 0;
+}
+
+/* Sub-footer Bottom Bar */
+.footer-sub-bar {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 13.5px;
+  color: #94a3b8;
+  position: relative;
+  z-index: 2;
+}
+
+.footer-sub-bar p {
+  margin: 0;
+}
+
+.footer-sub-location {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #cbd5e1;
+  padding-right: 60px;
+}
+
+.footer-sub-location svg {
+  color: #ffd83b;
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .footer-card {
+    padding: 38px 30px 26px;
+    border-radius: 22px;
+  }
+  .footer-main-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-wrap-container {
+    padding: 24px 14px 20px;
+  }
+  .footer-card {
+    padding: 32px 22px 24px;
+    border-radius: 18px;
+  }
+  .footer-main-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .footer-sub-bar {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+}

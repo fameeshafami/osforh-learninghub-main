@@ -1,0 +1,300 @@
+/* 10/10 Hub Pillars 3-Box Section (Model 1 Inspired) */
+.hub-pillars-sec {
+  padding: 90px 0 100px;
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 50%, #f8fafc 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hub-pillars-sec::before {
+  content: "";
+  position: absolute;
+  top: -150px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(0, 103, 56, 0.08) 0%, transparent 70%);
+  filter: blur(60px);
+  pointer-events: none;
+}
+
+.hub-pillars-header {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 55px;
+  position: relative;
+  z-index: 2;
+}
+
+.hub-pillars-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 103, 56, 0.08);
+  border: 1px solid rgba(0, 103, 56, 0.2);
+  color: #006738;
+  padding: 6px 16px;
+  border-radius: 99px;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.hub-pillars-badge .pillar-dot {
+  width: 7px;
+  height: 7px;
+  background: #006738;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(0, 103, 56, 0.6);
+  animation: pillarPulse 2s infinite ease-in-out;
+}
+
+@keyframes pillarPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+.hub-pillars-header h2 {
+  font-size: clamp(32px, 3.8vw, 44px);
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+
+.hub-pillars-header h2 span.accent-text {
+  color: #006738;
+  position: relative;
+  display: inline-block;
+}
+
+.hub-pillars-header h2 span.accent-text::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  width: 100%;
+  height: 8px;
+  background: rgba(182, 225, 43, 0.35);
+  z-index: -1;
+  border-radius: 4px;
+}
+
+.hub-pillars-header p {
+  font-size: 16px;
+  line-height: 1.65;
+  color: #475569;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+/* 3-Box Horizontal Grid */
+.hub-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Individual Card (Model 1 Elevated to 10/10) */
+.hub-pillar-card {
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 24px;
+  padding: 40px 32px 34px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04);
+  position: relative;
+  overflow: hidden;
+}
+
+.hub-pillar-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #006738, #b6e12b);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.hub-pillar-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(0, 103, 56, 0.35);
+  box-shadow: 0 20px 40px -15px rgba(0, 103, 56, 0.15), 0 0 0 1px rgba(0, 103, 56, 0.15);
+}
+
+.hub-pillar-card:hover::before {
+  opacity: 1;
+}
+
+/* Card Header & Icon */
+.pillar-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.pillar-icon-box {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #006738;
+  transition: all 0.35s ease;
+}
+
+.hub-pillar-card:hover .pillar-icon-box {
+  background: #006738;
+  color: #ffffff;
+  transform: scale(1.08) rotate(-3deg);
+  box-shadow: 0 8px 20px -4px rgba(0, 103, 56, 0.4);
+}
+
+.pillar-badge-tag {
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #006738;
+  background: rgba(0, 103, 56, 0.07);
+  padding: 4px 12px;
+  border-radius: 99px;
+  border: 1px solid rgba(0, 103, 56, 0.15);
+}
+
+/* Content */
+.hub-pillar-card h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 12px;
+  line-height: 1.3;
+}
+
+.hub-pillar-card p.pillar-desc {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: #64748b;
+  margin: 0 0 24px;
+  flex: 1;
+}
+
+/* Bullet Checklist */
+.pillar-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 20px;
+}
+
+.pillar-features li {
+  font-size: 13.5px;
+  color: #334155;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  line-height: 1.4;
+}
+
+.pillar-check-icon {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: rgba(0, 103, 56, 0.1);
+  color: #006738;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.hub-pillar-card:hover .pillar-check-icon {
+  background: #006738;
+  color: #ffffff;
+}
+
+/* Card Bottom Highlight Ribbon */
+.pillar-metric-bar {
+  margin-top: auto;
+  padding: 12px 16px;
+  background: #f8fafc;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #475569;
+  transition: background-color 0.3s;
+}
+
+.hub-pillar-card:hover .pillar-metric-bar {
+  background: #f0fdf4;
+  border-color: rgba(0, 103, 56, 0.2);
+}
+
+.pillar-metric-bar b {
+  color: #006738;
+  font-weight: 700;
+}
+
+/* Bottom CTA link */
+.hub-pillars-cta-row {
+  margin-top: 50px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.hub-pillars-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #006738;
+  color: #ffffff !important;
+  font: 700 15px Sora, sans-serif;
+  padding: 14px 32px;
+  border-radius: 99px;
+  text-decoration: none;
+  box-shadow: 0 10px 25px -5px rgba(0, 103, 56, 0.35);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hub-pillars-cta-btn:hover {
+  background: #007f45;
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px -8px rgba(0, 103, 56, 0.45);
+}
+
+/* Responsive */
+@media (max-width: 990px) {
+  .hub-pillars-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+  .hub-pillar-card {
+    padding: 32px 26px;
+  }
+}

@@ -1,0 +1,432 @@
+/* OfficeAdminShowcase.css - 10/10 Rating Executive Suite Styling */
+
+.oas-root {
+  width: 100%;
+  max-width: 620px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Header */
+.oas-console-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 8px 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.oas-badge-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.oas-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #0f172a;
+  color: #f8fafc;
+  font: 800 10px monospace;
+  padding: 4px 8px;
+  border-radius: 6px;
+  letter-spacing: 0.06em;
+}
+
+.oas-pulse-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 8px #10b981;
+  animation: oasPulse 2s infinite ease-in-out;
+}
+
+@keyframes oasPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.8); }
+}
+
+.oas-spec-pill {
+  font: 700 10px 'Sora', sans-serif;
+  color: #006738;
+  background: rgba(0, 103, 56, 0.12);
+  border: 1px solid rgba(0, 103, 56, 0.25);
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.oas-tab-buttons {
+  display: flex;
+  gap: 4px;
+}
+
+.oas-tab-btn {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  color: #475569;
+  font: 700 11px 'Sora', sans-serif;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.oas-tab-btn:hover {
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+.oas-tab-btn.active {
+  background: #006738;
+  border-color: #006738;
+  color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 103, 56, 0.25);
+}
+
+/* Chassis */
+.oas-chassis {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: column;
+}
+
+/* App Ribbon Bar */
+.oas-app-ribbon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  gap: 10px;
+  color: #ffffff;
+  font: 600 11px 'Sora', sans-serif;
+}
+
+.oas-app-ribbon.excel {
+  background: #107c41;
+}
+
+.oas-app-ribbon.word {
+  background: #185abd;
+}
+
+.oas-app-ribbon.outlook {
+  background: #7719aa;
+}
+
+.oas-dots {
+  display: flex;
+  gap: 5px;
+}
+
+.oas-dots .dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot.red { background: #ef4444; }
+.dot.yellow { background: #f59e0b; }
+.dot.green { background: #10b981; }
+
+.oas-formula-bar {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 3px 8px;
+  overflow: hidden;
+}
+
+.oas-formula-bar .fx {
+  font: 800 11px monospace;
+  color: #86efac;
+}
+
+.oas-formula-bar code {
+  color: #f0fdf4;
+  font: 500 10px monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.oas-doc-title {
+  color: #f8fafc;
+  font: 600 11px monospace;
+  letter-spacing: 0.02em;
+}
+
+.oas-app-tag {
+  font: 800 10px 'Sora', sans-serif;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 2px 6px;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+}
+
+/* Content Panel */
+.oas-content-panel {
+  padding: 16px;
+  background: #f8fafc;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* KPI Cards */
+.oas-kpi-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.oas-kpi-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+
+.kpi-title {
+  font: 600 10px 'Sora', sans-serif;
+  color: #64748b;
+  text-transform: uppercase;
+}
+
+.kpi-num {
+  font: 800 20px 'Sora', sans-serif;
+  color: #0f172a;
+}
+
+.kpi-badge.positive {
+  font: 700 10px 'Sora', sans-serif;
+  color: #006738;
+}
+
+/* Mini Table */
+.oas-mini-table {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  overflow: hidden;
+  font: 500 11px 'Inter', sans-serif;
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: 80px 1.2fr 1fr 1fr;
+  padding: 8px 10px;
+  background: #f1f5f9;
+  font: 700 9px 'Sora', sans-serif;
+  color: #475569;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 80px 1.2fr 1fr 1fr;
+  padding: 8px 10px;
+  align-items: center;
+  border-bottom: 1px solid #f1f5f9;
+  color: #1e293b;
+}
+
+.table-row:last-child {
+  border-bottom: none;
+}
+
+.table-row code {
+  color: #0284c7;
+  font-weight: 700;
+}
+
+.status-done {
+  color: #006738;
+  font-weight: 700;
+}
+
+.status-progress {
+  color: #d97706;
+  font-weight: 700;
+}
+
+/* Letterhead Mode */
+.oas-letterhead {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.lh-header b {
+  display: block;
+  font: 800 13px 'Sora', sans-serif;
+  color: #0f172a;
+  letter-spacing: 0.04em;
+}
+
+.lh-header small {
+  color: #64748b;
+  font: 500 10px 'Inter', sans-serif;
+}
+
+.lh-meta {
+  display: flex;
+  justify-content: space-between;
+  font: 600 10px 'Sora', sans-serif;
+  color: #475569;
+  border-top: 1px solid #f1f5f9;
+  border-bottom: 1px solid #f1f5f9;
+  padding: 6px 0;
+}
+
+.lh-body p {
+  margin: 4px 0;
+  font: 400 11px/1.5 'Inter', sans-serif;
+  color: #334155;
+}
+
+.lh-footer-chips {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+
+.lh-footer-chips span {
+  font: 600 10px 'Sora', sans-serif;
+  background: #f1f5f9;
+  color: #475569;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+/* Planner Mode */
+.oas-schedule-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.schedule-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+
+.schedule-item.priority-high {
+  border-left: 4px solid #7719aa;
+}
+
+.sch-time {
+  font: 800 11px monospace;
+  color: #7719aa;
+  width: 65px;
+  flex-shrink: 0;
+}
+
+.sch-detail {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.sch-detail b {
+  font: 700 11px 'Sora', sans-serif;
+  color: #0f172a;
+}
+
+.sch-detail span {
+  font: 400 10px 'Inter', sans-serif;
+  color: #64748b;
+}
+
+.sch-badge {
+  font: 700 9px 'Sora', sans-serif;
+  padding: 3px 8px;
+  border-radius: 99px;
+  background: #ede9fe;
+  color: #6d28d9;
+  white-space: nowrap;
+}
+
+.sch-badge.pending {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.sch-badge.done {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+/* Footer Chips */
+.oas-footer-chips {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 10px 14px;
+  background: #ffffff;
+  border-top: 1px solid #e2e8f0;
+}
+
+.oas-chip {
+  font: 600 11px 'Sora', sans-serif;
+  padding: 4px 10px;
+  border-radius: 99px;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  color: #334155;
+}
+
+.oas-chip.highlight {
+  background: rgba(0, 103, 56, 0.1);
+  border-color: rgba(0, 103, 56, 0.3);
+  color: #006738;
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .table-header, .table-row {
+    grid-template-columns: 60px 1fr 1fr;
+  }
+  .table-header span:last-child, .table-row b:last-child {
+    display: none;
+  }
+  .oas-tab-btn {
+    font-size: 10px;
+    padding: 4px 6px;
+  }
+}
+
