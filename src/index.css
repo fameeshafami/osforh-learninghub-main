@@ -2302,21 +2302,22 @@ footer {
   .ham {
     display: block;
   }
-  .ham i {
-    background: #006738;
+  #ham i {
+    background: #006738 !important;
   }
-  .mm {
-    background: #fcfaf5;
+  #mm {
+    background-color: #fcfaf5 !important;
   }
-  .mm a {
-    color: #15160f;
+  #mm > a:not(.btn) {
+    color: #15160f !important;
   }
-  .mm a.on {
-    color: #006738;
+  #mm > a.on:not(.btn) {
+    color: #006738 !important;
   }
-  .mm a.btn,
-  .mm a.btn:hover {
-    color: #ffffff;
+  #mm > a.btn,
+  #mm > a.btn:hover {
+    background-color: #006738 !important;
+    color: #ffffff !important;
   }
   .cl, .fgd, .pn .top {
     grid-template-columns: 1fr;
