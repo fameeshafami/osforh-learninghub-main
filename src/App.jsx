@@ -11,7 +11,6 @@ import Programs from './pages/Programs.jsx';
 import WhyOsforh from './pages/why-osforh.jsx';
 import Testimonials from './pages/testimonial.jsx';
 import Contact from './pages/Contact.jsx';
-import MarketingSchool from './pages/marketing-school.jsx';
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation();
@@ -44,7 +43,6 @@ export default function App() {
           <Route path="/why-osforh" element={<WhyOsforh />} />
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/marketing-school" element={<MarketingSchool />} />
 
           {/* Legacy HTML routes redirect support */}
           <Route path="/index.html" element={<Navigate to="/" replace />} />
