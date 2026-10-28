@@ -7,10 +7,10 @@ import ScrollProgressBar from './components/ScrollProgressBar.jsx';
 import WhatsAppButton from './components/WhatsAppButton.jsx';
 
 import Home from './pages/Home.jsx';
-import Programs from './pages/programs.jsx';
+import Programs from './pages/Programs.jsx';
 import WhyOsforh from './pages/why-osforh.jsx';
 import Testimonials from './pages/testimonial.jsx';
-import Contact from './pages/contact.jsx';
+import Contact from './pages/Contact.jsx';
 import MarketingSchool from './pages/marketing-school.jsx';
 
 function ScrollToTop() {
@@ -27,7 +27,7 @@ function ScrollToTop() {
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <ScrollToTop />
       {/* Experience Shell */}
       <Preloader />
