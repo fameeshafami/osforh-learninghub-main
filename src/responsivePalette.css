@@ -1,0 +1,518 @@
+@media (max-width: 900px) {
+  :root,
+  :root:not([data-theme="light"]),
+  :root[data-theme="dark"] {
+    color-scheme: light !important;
+    --paper: #fcfaf5 !important;
+    --paper-2: #ffffff !important;
+    --paper-3: #f1eee6 !important;
+    --ink: #15160f !important;
+    --ink-2: #3a3c31 !important;
+    --ink-soft: #6b6d61 !important;
+    --lime: #006738 !important;
+    --lime-deep: #006738 !important;
+    --accent: #006738 !important;
+    --accent-soft: #006738 !important;
+    --navy: #15160f !important;
+    --footer: #15160f !important;
+    --panel: #15160f !important;
+    --bg: #fcfaf5 !important;
+    --fg: #15160f !important;
+    --card: #ffffff !important;
+    --line: #e6e2d6 !important;
+    --mute: #6b6d61 !important;
+    --s: #fcfaf5 !important;
+    --s2: #f1eee6 !important;
+    --tx: #15160f !important;
+    --mu: #6b6d61 !important;
+    --ln: #e6e2d6 !important;
+  }
+
+  body {
+    background: #fcfaf5;
+    color: #15160f;
+  }
+
+  :root:not([data-theme="light"]) .wc-section,
+  :root[data-theme="dark"] .wc-section,
+  .wc-section {
+    --wc-bg: #fcfaf5 !important;
+    --wc-ink: #15160f !important;
+    --wc-muted: #6b6d61 !important;
+    --wc-green: #006738 !important;
+    --wc-lime: #b6e12b !important;
+    --wc-card: #ffffff !important;
+    --wc-line: #e6e2d6 !important;
+    --wc-chip: #eef6e6 !important;
+  }
+
+  .wc-section .wc-heading h2 mark {
+    color: #15160f;
+  }
+
+  .hub-root .dark:before {
+    background: radial-gradient(circle, #0067381c, #0000 62%);
+  }
+
+  .hub-root mark,
+  .hub-root mark.hl,
+  .hub-root .tag,
+  .hub-root .tile,
+  .hub-root .en-q,
+  .hub-root .en-qi h3,
+  .hub-root .why-heading h2 mark {
+    color: #15160f;
+  }
+
+  .hub-root .home-hero .dots button {
+    background: #15160f2e;
+  }
+
+  .hub-root .ic {
+    background: #ffffff;
+    border-color: #e6e2d6;
+  }
+
+  .hub-root .ic h3 {
+    color: #15160f;
+  }
+
+  .hub-root .ic .role,
+  .hub-root .ic .xp {
+    color: #6b6d61;
+  }
+
+  .dm-track-card {
+    --card-accent: #006738 !important;
+  }
+
+  .dm-track-num,
+  .dm-module-check {
+    color: #006738;
+  }
+
+  .alumni-title {
+    color: #15160f;
+  }
+
+  .alumni-title mark.alumni-hl {
+    color: #15160f;
+  }
+
+  .alumni-sub,
+  .alumni-company {
+    color: #6b6d61;
+  }
+
+  .footer-connect-item svg {
+    color: #006738;
+  }
+
+  .fac-title,
+  .fac-highlight,
+  .fac-item h3,
+  .fac-banner-text h4 {
+    color: #15160f;
+  }
+
+  .fac-desc,
+  .fac-item p,
+  .fac-banner-text p {
+    color: #6b6d61;
+  }
+
+  .fac-sec::after {
+    background: radial-gradient(circle, #0067380a 0%, transparent 70%);
+  }
+
+  .fac-banner {
+    background: linear-gradient(135deg, #fcfaf5 0%, #f1eee6 100%);
+    border-color: #e6e2d6;
+  }
+
+  .fac-banner-badge {
+    background: #006738;
+  }
+
+  .hub-pillars-sec,
+  .s-rev-sec {
+    background: linear-gradient(180deg, #fcfaf5 0%, #ffffff 50%, #fcfaf5 100%);
+  }
+
+  .hub-pillars-header h2,
+  .hub-pillar-card h3,
+  .pillar-features li,
+  .s-rev-title,
+  .rev-highlight,
+  .s-rev-filter-btn:hover,
+  .s-rev-heading,
+  .s-rev-name {
+    color: #15160f;
+  }
+
+  .hub-pillars-header p,
+  .hub-pillar-card p.pillar-desc,
+  .pillar-metric-bar,
+  .s-rev-lead,
+  .s-rev-body,
+  .s-rev-rating-count,
+  .s-rev-role {
+    color: #6b6d61;
+  }
+
+  .hub-pillar-card,
+  .s-rev-card,
+  .s-rev-rating-pill,
+  .s-rev-filter-btn {
+    border-color: #e6e2d6;
+  }
+
+  .pillar-icon-box,
+  .pillar-metric-bar,
+  .s-rev-sec .s-rev-filter-btn:hover {
+    background-color: #f1eee6;
+  }
+
+  .video-stories {
+    --ink: #15160f;
+    --muted: #6b6d61;
+  }
+
+  .video-stories h2,
+  .video-stories h2 em {
+    color: #15160f;
+  }
+
+  .oas-console-header,
+  .oas-tab-btn,
+  .oas-tab-btn:hover,
+  .oas-chassis,
+  .oas-kpi-card,
+  .oas-mini-table,
+  .oas-letterhead,
+  .schedule-item,
+  .oas-footer-chips {
+    border-color: #e6e2d6;
+  }
+
+  .oas-console-header,
+  .oas-tab-btn:hover,
+  .table-header,
+  .lh-footer-chips span,
+  .oas-chip {
+    background: #f1eee6;
+  }
+
+  .oas-status-pill {
+    color: #ffffff;
+  }
+
+  .oas-status-pill,
+  .oas-app-ribbon.word,
+  .oas-app-ribbon.outlook {
+    background: #006738;
+  }
+
+  .oas-tab-btn,
+  .table-header,
+  .kpi-title,
+  .lh-header small,
+  .lh-meta,
+  .lh-footer-chips span,
+  .sch-detail span {
+    color: #6b6d61;
+  }
+
+  .table-row,
+  .table-row code,
+  .kpi-num,
+  .lh-header b,
+  .lh-body p,
+  .sch-detail b,
+  .oas-chip {
+    color: #15160f;
+  }
+
+  .table-row code,
+  .sch-time {
+    color: #006738;
+  }
+
+  .schedule-item.priority-high {
+    border-left-color: #006738;
+  }
+
+  .sch-badge {
+    background: #eef6e6;
+    color: #006738;
+  }
+
+  .s-rev-title,
+  .rev-highlight,
+  .s-rev-rating-pill,
+  .s-rev-filter-btn:hover,
+  .s-rev-heading,
+  .s-rev-name {
+    color: #15160f;
+  }
+
+  .s-rev-lead,
+  .s-rev-rating-count,
+  .s-rev-role,
+  .s-rev-filter-btn {
+    color: #6b6d61;
+  }
+
+  .s-rev-filter-btn,
+  .s-rev-rating-pill {
+    border-color: #e6e2d6;
+  }
+
+  .credentials-header p,
+  .cred-body p,
+  .stat-item small,
+  .credentials-footer-cta .cta-text p,
+  .footer-connect-item,
+  .footer-nav-col ul li a,
+  .footer-sub-bar {
+    color: #cbd5c3;
+  }
+
+  .video-stories__header p {
+    color: #6b6d61;
+  }
+
+  .wds-device-btn,
+  .wds-btn-badge,
+  .wds-screen-pill,
+  .wds-audit-info,
+  .wds-footer-bar {
+    color: #6b6d61;
+  }
+
+  .wds-device-btn:hover,
+  .wds-device-btn.active {
+    color: #15160f;
+  }
+
+  .wds-headline {
+    color: #ffffff;
+  }
+
+  .wds-subheadline {
+    color: #cbd5c3;
+  }
+
+  .wds-url {
+    color: #cbd5c3;
+  }
+
+  .wds-chassis,
+  .wds-titlebar,
+  .wds-address-bar,
+  .wds-audit-box {
+    background-color: #15160f;
+  }
+
+  .wds-control-bar,
+  .wds-btn-badge {
+    background-color: #f1eee6;
+    border-color: #e6e2d6;
+  }
+
+  .wds-chassis,
+  .device-tablet .wds-chassis,
+  .device-mobile .wds-chassis,
+  .wds-mobile-notch {
+    border-color: #3a3c31;
+  }
+
+  .wds-mobile-notch,
+  .wds-speaker-grille,
+  .wds-wire-bar {
+    background-color: #3a3c31;
+  }
+
+  .wds-camera-lens,
+  .wds-code-identity code,
+  .wds-mode-label,
+  .wds-metric-pill.speed,
+  .wds-metric-pill.mobile,
+  .wds-metric-pill.cms,
+  .wds-code-snippet {
+    color: #b6e12b;
+  }
+
+  .wds-camera-lens {
+    background-color: #006738;
+    box-shadow: 0 0 4px #006738;
+  }
+
+  .wds-metric-pill.speed,
+  .wds-metric-pill.mobile,
+  .wds-metric-pill.cms {
+    background: #00673826;
+    border-color: #0067384d;
+  }
+
+  .wds-mode-label {
+    background: #00673826;
+    border-color: #0067384d;
+  }
+
+  .ves-res-pill,
+  .ves-btn-lut,
+  .ves-track-label,
+  .ves-timeline-ruler {
+    color: #cbd5c3;
+  }
+
+  .ves-btn-lut.active {
+    background: #006738;
+    border-color: #006738;
+  }
+
+  .ves-studio-box,
+  .ves-timeline,
+  .ves-tools-footer {
+    background-color: #15160f;
+    border-color: #3a3c31;
+  }
+
+  .ves-timecode,
+  .ves-chip.ai {
+    color: #b6e12b;
+  }
+
+  .ves-chip.ai {
+    background: #00673840;
+    border-color: #00673880;
+  }
+
+  .clip-ai,
+  .clip-vfx {
+    background: linear-gradient(90deg, #006738, #14532d);
+    border-left-color: #b6e12b;
+  }
+
+  .ms-page {
+    background-color: #fcfaf5 !important;
+    color: #15160f !important;
+  }
+
+  .ms-nav,
+  .ms-press,
+  .ms-placements {
+    background-color: #fcfaf5 !important;
+    border-color: #e6e2d6 !important;
+  }
+
+  .ms-menu,
+  .ms-logo-tag,
+  .ms-btn-pill,
+  .ms-badge-box,
+  .ms-info-tag,
+  .ms-course-badge {
+    background: #eef6e6 !important;
+    border-color: #e6e2d6 !important;
+    color: #006738 !important;
+  }
+
+  .ms-menu a.active,
+  .ms-menu a.active::before,
+  .ms-btn-circle,
+  .ms-play-icon,
+  .ms-stat-plus,
+  .ms-course-arrow,
+  .ms-info-dot,
+  .ms-logo-tag,
+  .ms-course-badge {
+    color: #006738 !important;
+    background-color: #eef6e6 !important;
+  }
+
+  .ms-press-logo:hover {
+    color: #006738 !important;
+  }
+
+  .ms-btn-circle,
+  .ms-play-icon {
+    background: #006738 !important;
+    color: #ffffff !important;
+  }
+
+  .ms-info-dot {
+    background: #006738 !important;
+  }
+
+  .ms-hero h1 span,
+  .ms-info-tag,
+  .ms-stat-plus,
+  .ms-course-badge,
+  .ms-course-arrow {
+    color: #006738 !important;
+  }
+
+  .ms-menu a,
+  .ms-logo,
+  .ms-hero p.lead,
+  .ms-badge-box,
+  .ms-about-desc,
+  .ms-stat-num,
+  .ms-course-row,
+  .ms-course-row h3,
+  .ms-courses-head h2,
+  .ms-culture-head h2 {
+    color: #15160f !important;
+  }
+
+  .ms-stat-label,
+  .ms-course-row p {
+    color: #6b6d61 !important;
+  }
+
+  .ms-hero-art,
+  .ms-press,
+  .ms-placements,
+  .ms-culture-item {
+    background: #f1eee6 !important;
+    border-color: #e6e2d6 !important;
+    box-shadow: 0 24px 48px -24px #00673826 !important;
+  }
+
+  .ms-video-card,
+  .ms-approach {
+    background: #15160f !important;
+  }
+
+  .ms-approach .ms-info-tag {
+    background: #00673840 !important;
+    color: #b6e12b !important;
+  }
+
+  .ms-approach .ms-info-dot {
+    background: #b6e12b !important;
+  }
+
+  .ms-approach .ms-feat-card p {
+    color: #cbd5c3 !important;
+  }
+
+  .ms-course-row:hover,
+  .ms-course-row:hover .ms-course-badge,
+  .ms-cta-blue-box,
+  .ms-btn-pill:hover,
+  .ms-btn-pill:hover .ms-btn-circle {
+    background-color: #006738 !important;
+    color: #ffffff !important;
+  }
+
+  .ms-cta-blue-box h2 {
+    color: #ffffff !important;
+  }
+
+  .ms-course-row:hover p,
+  .ms-course-row:hover .ms-course-badge {
+    color: #ffffff !important;
+  }
+}
