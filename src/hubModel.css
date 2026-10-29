@@ -482,6 +482,12 @@
   .hub-root .acc {
     height: 280px;
   }
+
+  /* Hide the "OSFORH LEARNING HUB · TIRUR" pill badge on mobile */
+  .hub-root .pill,
+  .hub-root .home-hero .pill {
+    display: none;
+  }
 }
 
 /* Partners & Collaborators */
