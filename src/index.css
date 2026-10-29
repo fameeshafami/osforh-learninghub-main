@@ -2360,6 +2360,40 @@ footer {
   .art {
     max-width: 240px;
   }
+  .pill {
+    display: none !important;
+  }
+  .cmp {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrap {
+    padding: 0 16px;
+  }
+  .md {
+    grid-template-columns: 1fr;
+  }
+  .tl {
+    padding-left: 54px;
+  }
+  .tl::before, .tl::after {
+    left: 18px;
+  }
+  .sp {
+    padding: 16px 18px;
+  }
+  .sp i {
+    left: -54px;
+    width: 40px;
+    height: 40px;
+    font-size: 15px;
+  }
+  .cmp div {
+    min-width: 480px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
