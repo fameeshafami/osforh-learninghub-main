@@ -36,7 +36,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/OsforhLearningHub"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="footer-social-btn"
@@ -61,7 +61,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/login/?session_redirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2F106718900%2Fadmin%2Fpage-posts%2Fpublished%2F"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="footer-social-btn"

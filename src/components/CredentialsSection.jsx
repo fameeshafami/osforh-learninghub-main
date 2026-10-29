@@ -23,8 +23,8 @@ export default function CredentialsSection() {
       icon: '🚀',
       pill: 'Job Ready',
       title: '5-Project Recruiter Portfolio',
-      desc: 'Graduate with 5 production case studies—clean GitHub repositories for coders, Behance portfolios for designers, and real ad-spend reports for marketers.',
-      tags: ['5 Case Studies', 'GitHub & Behance', 'Direct Recruiter Review']
+      desc: 'Graduate with 5 production case studies—clean GitHub repositories for coders, professional design portfolios for designers, and real campaign reports for marketers.',
+      tags: ['5 Case Studies', 'GitHub & Portfolios', 'Direct Recruiter Review']
     },
     {
       icon: '🌐',

@@ -142,14 +142,35 @@ export default function ProgramDetail({ programKey, program }) {
                 {/* <div className="fb-icon">🎯</div> */}
                 <div>
                   <b>Hands-On Real Projects</b>
-                  <p>Work on active live campaigns with actual ad budgets and tangible deliverables.</p>
+                  <p>
+                    {program.about?.handsOnText ||
+                      (programKey === 'dm'
+                        ? 'Work on active live campaigns with real SEO audits, social campaigns, and tangible deliverables.'
+                        : programKey === 'gd'
+                        ? 'Design real-world client brand identities, packaging, typography, and commercial print assets.'
+                        : programKey === 'wd'
+                        ? 'Build and deploy functional web applications, responsive layouts, and database-backed projects.'
+                        : programKey === 've'
+                        ? 'Edit cinematic commercials, viral social reels, motion sequences, and AI video workflows.'
+                        : 'Manage real office documentation, executive spreadsheets, MIS reporting, and digital workflows.')}
+                  </p>
                 </div>
               </div>
               <div className="dm-feature-box">
                 {/* <div className="fb-icon">👨‍🏫</div> */}
                 <div>
                   <b>Experienced Industry Mentors</b>
-                  <p>Learn directly from seasoned practitioners who lead campaigns every day.</p>
+                  <p>
+                    {programKey === 'dm'
+                      ? 'Learn directly from seasoned digital marketers who lead live campaigns every day.'
+                      : programKey === 'gd'
+                      ? 'Learn directly from certified graphic designers and creative brand leads.'
+                      : programKey === 'wd'
+                      ? 'Learn directly from seasoned full-stack engineers and web architects.'
+                      : programKey === 've'
+                      ? 'Learn directly from professional video editors and motion graphics artists.'
+                      : 'Learn directly from senior corporate administrators and operations specialists.'}
+                  </p>
                 </div>
               </div>
               <div className="dm-feature-box">

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import PageHeader from '../components/PageHeader.jsx';
 import ProgramDetail from '../components/ProgramDetail.jsx';
 import { PROGRAMS, PROGRAM_KEYS } from '../data/siteData.jsx';
@@ -9,9 +9,21 @@ export default function Programs() {
   const navigate = useNavigate();
   const [activeKey, setActiveKey] = useState('dm');
 
+  // Synchronize activeKey with URL hash and scroll when arriving with a hash
   useEffect(() => {
     document.title = "Programs | Osforh Learning Hub";
-    window.scrollTo(0, 0);
+    const hash = location.hash.replace('#', '');
+    if (hash && PROGRAMS[hash]) {
+      setActiveKey(hash);
+      setTimeout(() => {
+        const el = document.getElementById('programs-tabs') || document.getElementById('pnl');
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+    } else {
+      window.scrollTo(0, 0);
+    }
   }, []);
 
   useEffect(() => {
@@ -23,7 +35,11 @@ export default function Programs() {
 
   const handleSelectTab = (key) => {
     setActiveKey(key);
-    navigate(`/programs#${key}`, { replace: true });
+    navigate(`/programs#${key}`);
+    const el = document.getElementById('programs-tabs') || document.getElementById('pnl');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   };
 
   return (
@@ -40,21 +56,25 @@ export default function Programs() {
       />
 
       {/* Sticky Program Navigation Tabs */}
-      <div className="tabs">
+      <div className="tabs" id="programs-tabs">
         <div className="wrap">
           {PROGRAM_KEYS.map((key) => {
             const prog = PROGRAMS[key];
             const isActive = activeKey === key;
             return (
-              <button
+              <Link
                 key={key}
+                to={`/programs#${key}`}
                 className={`tb ${isActive ? 'on' : ''}`}
                 style={{ '--c': prog.a }}
-                onClick={() => handleSelectTab(key)}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleSelectTab(key);
+                }}
               >
                 <i></i>
                 {prog.s}
-              </button>
+              </Link>
             );
           })}
         </div>
@@ -101,33 +121,72 @@ export default function Programs() {
       <section>
         <div className="wrap">
           <div className="hd rv on">
-
             <h2>
               Find the program that <span className="gr">fits you</span>
             </h2>
             <p>You do not need a background in any of these. Start with what you enjoy.</p>
           </div>
           <div className="w4">
-            <div className="rv on" onClick={() => handleSelectTab('dm')} style={{ cursor: 'pointer' }}>
+            <Link
+              className="rv on"
+              to="/programs#dm"
+              onClick={(e) => {
+                e.preventDefault();
+                handleSelectTab('dm');
+              }}
+              style={{ cursor: 'pointer', textDecoration: 'none', color: 'inherit' }}
+            >
               You like ads, numbers and growth
               <small>Choose Digital Marketing &amp; AI and run live campaigns.</small>
-            </div>
-            <div className="rv on" onClick={() => handleSelectTab('gd')} style={{ cursor: 'pointer' }}>
+            </Link>
+            <Link
+              className="rv on"
+              to="/programs#gd"
+              onClick={(e) => {
+                e.preventDefault();
+                handleSelectTab('gd');
+              }}
+              style={{ cursor: 'pointer', textDecoration: 'none', color: 'inherit' }}
+            >
               You like colour, type and brands
-              <small>Choose Graphic Design and finish with a Behance portfolio.</small>
-            </div>
-            <div className="rv on" onClick={() => handleSelectTab('wd')} style={{ cursor: 'pointer' }}>
+              <small>Choose Graphic Design and finish with a professional design portfolio.</small>
+            </Link>
+            <Link
+              className="rv on"
+              to="/programs#wd"
+              onClick={(e) => {
+                e.preventDefault();
+                handleSelectTab('wd');
+              }}
+              style={{ cursor: 'pointer', textDecoration: 'none', color: 'inherit' }}
+            >
               You like building things that work
-              <small>Choose Web Development and ship real websites.</small>
-            </div>
-            <div className="rv on" onClick={() => handleSelectTab('ve')} style={{ cursor: 'pointer' }}>
+              <small>Choose Web Development and build responsive sites or full-stack web apps.</small>
+            </Link>
+            <Link
+              className="rv on"
+              to="/programs#ve"
+              onClick={(e) => {
+                e.preventDefault();
+                handleSelectTab('ve');
+              }}
+              style={{ cursor: 'pointer', textDecoration: 'none', color: 'inherit' }}
+            >
               You like storytelling, visual effects and reels
-              <small>Choose Video Editing &amp; Motion and craft viral content with AI.</small>
-            </div>
-            <div className="rv on" onClick={() => handleSelectTab('oa')} style={{ cursor: 'pointer' }}>
+              <small>Choose Video Editing &amp; AI and craft cinematic and viral videos.</small>
+            </Link>
+            <Link
+              className="rv on"
+              to="/programs#oa"
+              onClick={(e) => {
+                e.preventDefault();
+                handleSelectTab('oa');
+              }}
+              style={{ cursor: 'pointer', textDecoration: 'none', color: 'inherit' }}
+            >
               You like order, planning and people
               <small>Choose Office Administration for a steady professional career.</small>
-            </div>
+            </Link>
           </div>
         </div>
       </section>

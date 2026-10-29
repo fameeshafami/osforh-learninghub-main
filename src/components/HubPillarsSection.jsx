@@ -19,7 +19,7 @@ export default function HubPillarsSection() {
       features: [
         'Real ₹2L+ live campaign budgets handled',
         'Direct client briefs & creative deliverables',
-        'GitHub & Behance production commits'
+        'GitHub & design production portfolio commits'
       ]
     },
     {
@@ -74,7 +74,7 @@ export default function HubPillarsSection() {
             Engineered for real careers, <span className="accent-text">not just theory</span>
           </h2>
           <p>
-            Three foundational advantages that transform college freshers into commercial creators and developers in under 5 months.
+            Three foundational advantages that transform college freshers into commercial creators and developers through hands-on practical mastery.
           </p>
         </div>
 

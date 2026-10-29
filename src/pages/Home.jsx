@@ -29,9 +29,9 @@ export default function Home() {
           Run <span>live campaigns</span>
         </>
       ),
-      description: "Meta and Google ads with real client budgets, SEO, funnels, GA4 and AI workflows over 5 months plus a 1-month internship.",
+      description: "Social media, SEO, search engine marketing, e-commerce and AI tools over 4 months.",
       tabTitle: "Digital Marketing & AI",
-      tabDesc: "Live campaigns, real client budgets and AI workflows."
+      tabDesc: "Social media, SEO, SEM, e-commerce and AI tools."
     },
     {
       heading: (
@@ -40,9 +40,9 @@ export default function Home() {
           Design brands that <span>sell</span>
         </>
       ),
-      description: "Brand identity, packaging, typography, Photoshop and Illustrator, finished with a Behance portfolio in 4 months.",
+      description: "Canva, Photoshop, Illustrator and InDesign, taught in 3 months.",
       tabTitle: "Graphic Design",
-      tabDesc: "Build brand identities and a polished Behance portfolio.",
+      tabDesc: "Canva, Photoshop, Illustrator and InDesign branding.",
       img: gdArtImg
     },
     {
@@ -52,9 +52,9 @@ export default function Home() {
           Ship real <span>websites</span>
         </>
       ),
-      description: "From HTML, CSS and JavaScript to Next.js, Webflow, WooCommerce and CMS builds in 4 intensive months.",
+      description: "From HTML, CSS and responsive design to the full MERN stack, in 4 or 6 months.",
       tabTitle: "Web Development",
-      tabDesc: "Build and launch modern websites, stores and CMS projects."
+      tabDesc: "Responsive web design to full MERN stack projects."
     },
     {
       heading: (
@@ -63,9 +63,9 @@ export default function Home() {
           Create <span>cinematic videos</span>
         </>
       ),
-      description: "Edit with Premiere Pro and After Effects, create motion graphics and cinematic color grades, and use AI video workflows over 3 months plus a 1-month internship.",
+      description: "Premiere Pro, CapCut, After Effects, DaVinci and AI video generation in 2 months.",
       tabTitle: "Video Editing & AI",
-      tabDesc: "Combine pro editing, motion graphics and AI video tools."
+      tabDesc: "Premiere Pro, CapCut, After Effects and AI video."
     }
   ];
 
@@ -90,36 +90,36 @@ export default function Home() {
 
   const programsList = [
     {
-      title: "Digital Marketing",
-      subtags: "SEO · SOCIAL MEDIA · CONTENT",
-      duration: "5 months + 1 mo internship",
+      title: "Digital Marketing & AI",
+      subtags: "SOCIAL MEDIA · SEO · SEM · AI TOOLS",
+      duration: "4 months practical",
       link: "/programs#dm",
       img: dmImg,
-      desc: "SEO, social media, content, paid ads, analytics and AI-assisted marketing."
+      desc: "Social media, SEO, search engine marketing, e-commerce, email marketing and AI tools over 4 months."
     },
     {
-      title: "Video Editing & AI Motion Graphics",
-      subtags: "PREMIERE PRO · AFTER EFFECTS · AI VIDEO",
-      duration: "3 months + 1 mo internship",
+      title: "Video Editing & AI",
+      subtags: "PREMIERE PRO · CAPCUT · AFTER EFFECTS · DAVINCI",
+      duration: "2 months practical",
       link: "/programs#ve",
       img: videoImg,
-      desc: "Create cinematic edits, motion graphics and short-form reels with Premiere Pro, After Effects, and AI-powered video workflows."
+      desc: "Premiere Pro, CapCut, After Effects, DaVinci Resolve and AI video generation in 2 months."
     },
     {
       title: "Graphic Designing",
-      subtags: "BRANDING · TYPOGRAPHY · PHOTOSHOP",
-      duration: "4 months practical",
+      subtags: "CANVA · PHOTOSHOP · ILLUSTRATOR · INDESIGN",
+      duration: "3 months practical",
       link: "/programs#gd",
       img: gdArtImg,
-      desc: "Visual communication, branding, typography, digital design and portfolio development."
+      desc: "Visual communication, branding, typography, Canva, Photoshop, Illustrator and InDesign in 3 months."
     },
     {
       title: "Website Development",
-      subtags: "HTML · CSS · JAVASCRIPT",
-      duration: "4 months intensive",
+      subtags: "HTML/CSS · JAVASCRIPT · REACT · MERN STACK",
+      duration: "4 or 6 months",
       link: "/programs#wd",
       img: codingImg,
-      desc: "HTML, CSS, JavaScript, WordPress, responsive design and practical website projects."
+      desc: "From Web Fundamentals (4 months) to Full Stack MERN Development (6 months)."
     },
     {
       title: "Office Administration",
@@ -127,7 +127,7 @@ export default function Home() {
       duration: "3 months practical",
       link: "/programs#oa",
       img: officeImg,
-      desc: "Office software, documentation, professional communication and administrative skills."
+      desc: "Office software, documentation, professional communication and administrative skills in 3 months."
     }
   ];
 
@@ -170,7 +170,7 @@ export default function Home() {
     },
     {
       stars: "★★★★★",
-      title: "My Behance portfolio got me hired in Kochi",
+      title: "My design portfolio got me hired in Kochi",
       text: "Other institutes just teach tool shortcuts. Osforh taught me packaging design, grid systems, and brand psychology. The creative mentors helped me refine 5 full case studies.",
       name: "Rahul Krishna",
       course: "Graphic Design & Visual Identity"
@@ -229,7 +229,7 @@ export default function Home() {
                 <Link className="btn ghost" to="/contact">
                   Talk to an expert
                 </Link>
-                <Link className="btn" to="/programs">
+                <Link className="btn" to="/programs#dm">
                   Explore programs
                 </Link>
               </div>

@@ -41,7 +41,7 @@ export default function Testimonials() {
           <div className="w4">
             <div className="rv on">
               Job-ready portfolio
-              <small>Case studies on live domains and Behance that recruiters prioritise.</small>
+              <small>Case studies on live domains and design portfolios that recruiters prioritise.</small>
             </div>
             <div className="rv on">
               Mock interview drills

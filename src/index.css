@@ -1368,35 +1368,51 @@ nav .wrap {
   padding: 12px 22px;
   border-radius: 99px;
   border: 1px solid var(--ln);
-  background: transparent;
-  color: var(--mu);
+  background: #ffffff;
+  color: var(--ink, #1f2937);
   cursor: pointer;
-  transition: 0.3s;
+  transition: all 0.25s ease;
   display: flex;
   gap: 10px;
   align-items: center;
+  text-decoration: none;
 }
 
 .tb i {
   width: 9px;
   height: 9px;
   border-radius: 50%;
-  background: var(--c);
+  background: var(--c, #006738);
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
 }
 
 .tb:hover {
-  color: #fff;
-  border-color: var(--c);
+  color: #006738;
+  border-color: #006738;
+  background: #f0fdf4;
+  transform: translateY(-1px);
+}
+
+.tb:hover i {
+  transform: scale(1.2);
 }
 
 .tb.on {
   background: #006738;
-  color: #ffffff;
+  color: #ffffff !important;
   border-color: #006738;
+  box-shadow: 0 4px 14px rgba(0, 103, 56, 0.25);
 }
 
 .tb.on i {
   background: #ffffff;
+}
+
+.tb.on:hover {
+  background: #00562f;
+  color: #ffffff !important;
+  border-color: #00562f;
 }
 
 .pn {

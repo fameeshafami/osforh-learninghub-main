@@ -113,7 +113,7 @@ export default function VideoEditingStudioShowcase({ accent = '#006738' }) {
               <div className="ves-track-lane">
                 <div className="ves-clip clip-ai">
                   <span className="clip-icon">🤖</span>
-                  <span className="clip-title">Runway AI Synthesis</span>
+                  <span className="clip-title">AI Video Synthesis</span>
                 </div>
                 <div className="ves-clip clip-vfx">
                   <span className="clip-icon">✨</span>

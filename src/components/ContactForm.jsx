@@ -2,6 +2,35 @@ import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { PROGRAMS } from '../data/siteData.jsx';
 
+const COURSE_LIST = [
+  "Digital Marketing",
+  "Graphic Design",
+  "Web Development",
+  "Video Editing",
+  "Office Administration"
+];
+
+function normalizeCourse(name) {
+  if (!name) return 'Digital Marketing';
+  const lower = name.toLowerCase();
+  if (lower.includes('market') || lower.includes('seo') || lower.includes('sem') || lower === 'dm') {
+    return 'Digital Marketing';
+  }
+  if (lower.includes('graphic') || lower.includes('design') || lower === 'gd') {
+    return 'Graphic Design';
+  }
+  if (lower.includes('web') || lower.includes('full stack') || lower.includes('code') || lower === 'wd') {
+    return 'Web Development';
+  }
+  if (lower.includes('video') || lower.includes('editing') || lower.includes('reel') || lower === 've') {
+    return 'Video Editing';
+  }
+  if (lower.includes('office') || lower.includes('admin') || lower === 'oa') {
+    return 'Office Administration';
+  }
+  return COURSE_LIST.includes(name) ? name : 'Digital Marketing';
+}
+
 export default function ContactForm() {
   const location = useLocation();
   const [fullName, setFullName] = useState('');
@@ -13,7 +42,7 @@ export default function ContactForm() {
     const searchParams = new URLSearchParams(location.search);
     const queryCourse = searchParams.get('course');
     if (queryCourse) {
-      setProgram(queryCourse);
+      setProgram(normalizeCourse(queryCourse));
       return;
     }
 
@@ -67,43 +96,11 @@ export default function ContactForm() {
               value={program}
               onChange={(e) => setProgram(e.target.value)}
             >
-              {program && !Object.values(PROGRAMS).some(p => p.s === program) && (
-                <option value={program}>{program}</option>
-              )}
-              {Object.keys(PROGRAMS).map((key) => (
-                <option key={key} value={PROGRAMS[key].s}>
-                  {PROGRAMS[key].s}
+              {COURSE_LIST.map((c) => (
+                <option key={c} value={c}>
+                  {c}
                 </option>
               ))}
-              <optgroup label="Digital Marketing Specializations">
-                <option value="DIPLOMA IN DIGITAL MARKETING">Diploma in Digital Marketing (3 Mo + 1 Mo Int)</option>
-                <option value="DIGITAL MARKETING AND GRAPHIC DESIGNING">Digital Marketing &amp; Graphic Designing (7 Mo + 1 Mo Int)</option>
-                <option value="Social Media Marketing">Social Media Marketing (1 Mo + 1 Mo Int)</option>
-                <option value="SEO (Search engine Optimisation)">SEO - Search Engine Optimisation (1 Mo + 1 Mo Int)</option>
-              </optgroup>
-              <optgroup label="Graphic Designing Specializations">
-                <option value="Expert-Led Training">Expert-Led Training (3 Mo + 1 Mo Int)</option>
-                <option value="Master Graphic Tools">Master Graphic Tools (3 Mo + 1 Mo Int)</option>
-              </optgroup>
-              <optgroup label="Website Development Specializations">
-                <option value="RESPONSIVE DESIGN">Responsive Design (1 Mo + 1 Mo Int)</option>
-                <option value="USER FRIENDLY NAVIGATION">User Friendly Navigation (1 Mo + 1 Mo Int)</option>
-                <option value="BRANDING AND VISUAL IDENTITY">Branding &amp; Visual Identity (1 Mo + 1 Mo Int)</option>
-                <option value="CMS & Platform Management">CMS &amp; Platform Management (1 Mo + 1 Mo Int)</option>
-              </optgroup>
-              <optgroup label="Video Editing Specializations">
-                <option value="SHORT-FORM & VIRAL REELS">Short-Form &amp; Viral Reels (1 Mo + 1 Mo Int)</option>
-                <option value="CINEMATIC COLOR & AUDIO">Cinematic Color &amp; Audio (1 Mo + 1 Mo Int)</option>
-                <option value="AFTER EFFECTS & MOTION GRAPHICS">After Effects &amp; Motion Graphics (1 Mo + 1 Mo Int)</option>
-                <option value="AI VIDEO GENERATION">AI Video Generation &amp; Workflows (1 Mo + 1 Mo Int)</option>
-              </optgroup>
-              <optgroup label="Office Administration Specializations">
-                <option value="Administrative Skills">Administrative Skills (3 Mo + 1 Mo Int)</option>
-                <option value="Communication & Interpersonal Skills">Communication &amp; Interpersonal Skills (1 Mo + 1 Mo Int)</option>
-                <option value="Office Technology & Tools">Office Technology &amp; Tools (3 Mo + 1 Mo Int)</option>
-                <option value="Organizational & Time Management">Organizational &amp; Time Management (1 Mo + 1 Mo Int)</option>
-              </optgroup>
-              <option value="Undecided">Undecided</option>
             </select>
           </label>
         </div>
