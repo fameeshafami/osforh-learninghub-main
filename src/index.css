@@ -1658,13 +1658,18 @@ nav .wrap {
   top: 18px;
   left: 24px;
   font: 800 14px Sora;
-  color: #ffffff;
+  color: #ffffff !important;
   background: var(--lime);
   width: 38px;
   height: 38px;
   border-radius: 50%;
   display: grid;
   place-items: center;
+}
+
+.w4 div:hover::before {
+  color: #ffffff !important;
+  background: var(--lime);
 }
 
 .w4 div:hover {
