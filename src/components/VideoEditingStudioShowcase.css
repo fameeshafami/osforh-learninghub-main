@@ -40,10 +40,10 @@
   padding: 3px 8px;
   border-radius: 6px;
 }
-
+  
 .ves-rec-dot {
   width: 7px;
-  height: 7px;
+  height: 7px;        
   border-radius: 50%;
   background: #ef4444;
 }
