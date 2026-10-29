@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import PageHeader from '../components/PageHeader.jsx';
 import ProgramDetail from '../components/ProgramDetail.jsx';
@@ -8,6 +8,14 @@ export default function Programs() {
   const location = useLocation();
   const navigate = useNavigate();
   const [activeKey, setActiveKey] = useState('dm');
+  const tabsWrapRef = useRef(null);
+
+  const scrollTabs = (direction) => {
+    if (tabsWrapRef.current) {
+      const scrollAmount = direction === 'left' ? -180 : 180;
+      tabsWrapRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+  };
 
   // Synchronize activeKey with URL hash and scroll when arriving with a hash
   useEffect(() => {
@@ -20,6 +28,10 @@ export default function Programs() {
         if (el) {
           el.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
+        const tabEl = document.getElementById(`tab-${hash}`);
+        if (tabEl) {
+          tabEl.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        }
       }, 100);
     } else {
       window.scrollTo(0, 0);
@@ -30,6 +42,10 @@ export default function Programs() {
     const hash = location.hash.replace('#', '');
     if (hash && PROGRAMS[hash]) {
       setActiveKey(hash);
+      const tabEl = document.getElementById(`tab-${hash}`);
+      if (tabEl) {
+        tabEl.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      }
     }
   }, [location.hash]);
 
@@ -39,6 +55,10 @@ export default function Programs() {
     const el = document.getElementById('programs-tabs') || document.getElementById('pnl');
     if (el) {
       el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    const tabEl = document.getElementById(`tab-${key}`);
+    if (tabEl) {
+      tabEl.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
     }
   };
 
@@ -57,26 +77,45 @@ export default function Programs() {
 
       {/* Sticky Program Navigation Tabs */}
       <div className="tabs" id="programs-tabs">
-        <div className="wrap">
-          {PROGRAM_KEYS.map((key) => {
-            const prog = PROGRAMS[key];
-            const isActive = activeKey === key;
-            return (
-              <Link
-                key={key}
-                to={`/programs#${key}`}
-                className={`tb ${isActive ? 'on' : ''}`}
-                style={{ '--c': prog.a }}
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleSelectTab(key);
-                }}
-              >
-                <i></i>
-                {prog.s}
-              </Link>
-            );
-          })}
+        <div className="tabs-container-outer">
+          <button
+            className="tabs-arrow-btn tabs-arrow-prev"
+            type="button"
+            aria-label="Previous programs"
+            onClick={() => scrollTabs('left')}
+          >
+            ‹
+          </button>
+          <div className="wrap tabs-scroll-track" ref={tabsWrapRef}>
+            {PROGRAM_KEYS.map((key) => {
+              const prog = PROGRAMS[key];
+              const isActive = activeKey === key;
+              return (
+                <Link
+                  key={key}
+                  id={`tab-${key}`}
+                  to={`/programs#${key}`}
+                  className={`tb ${isActive ? 'on' : ''}`}
+                  style={{ '--c': prog.a }}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleSelectTab(key);
+                  }}
+                >
+                  <i></i>
+                  {prog.s}
+                </Link>
+              );
+            })}
+          </div>
+          <button
+            className="tabs-arrow-btn tabs-arrow-next"
+            type="button"
+            aria-label="Next programs"
+            onClick={() => scrollTabs('right')}
+          >
+            ›
+          </button>
         </div>
       </div>
 

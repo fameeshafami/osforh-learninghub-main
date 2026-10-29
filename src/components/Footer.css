@@ -199,9 +199,16 @@
 
 /* Responsive */
 @media (max-width: 960px) {
+  .footer-wrap-container {
+    padding: 0;
+  }
   .footer-card {
-    padding: 38px 30px 26px;
-    border-radius: 22px;
+    padding: 44px 28px 26px;
+    border-radius: 0;
+    max-width: 100%;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
   }
   .footer-main-grid {
     grid-template-columns: 1fr 1fr;
@@ -211,11 +218,15 @@
 
 @media (max-width: 600px) {
   .footer-wrap-container {
-    padding: 24px 14px 20px;
+    padding: 0;
   }
   .footer-card {
-    padding: 32px 22px 24px;
-    border-radius: 18px;
+    padding: 38px 20px 24px;
+    border-radius: 0;
+    max-width: 100%;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
   }
   .footer-main-grid {
     grid-template-columns: 1fr;
