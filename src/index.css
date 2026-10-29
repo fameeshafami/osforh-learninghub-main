@@ -1710,6 +1710,7 @@ nav .wrap {
   width: 6px;
   background: var(--ln);
   border-radius: 6px;
+  z-index: 0;
 }
 
 .tl::after {
@@ -1723,6 +1724,7 @@ nav .wrap {
   border-radius: 6px;
   box-shadow: 0 0 18px var(--lime);
   transition: height 0.15s ease-out;
+  z-index: 1;
 }
 
 .sp {
@@ -1732,6 +1734,7 @@ nav .wrap {
   border-radius: 22px;
   padding: 22px 26px;
   transition: 0.4s;
+  z-index: 2;
 }
 
 .sp:hover {
@@ -1747,20 +1750,23 @@ nav .wrap {
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  background: var(--bg);
-  border: 3px solid var(--ln);
+  background: var(--lime);
+  border: 3px solid var(--lime);
   display: grid;
   place-items: center;
   font: 800 20px Sora;
   font-style: normal;
   transition: 0.5s;
+  color: #ffffff !important;
+  z-index: 3;
 }
 
 .sp.on i {
   background: var(--lime);
-  color: #ffffff;
+  color: #ffffff !important;
   border-color: var(--lime);
   transform: scale(1.1);
+  z-index: 4;
 }
 
 .sp h3 {
