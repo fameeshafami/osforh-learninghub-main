@@ -17,16 +17,6 @@
   --fg: var(--ink);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #0e1124;
-    --fg: #f1f1f7;
-    --card: #171c3d;
-    --line: #ffffff1f;
-    --mute: #a9b0c4;
-  }
-}
-
 :root[data-theme="dark"] {
   --bg: #0e1124;
   --fg: #f1f1f7;
