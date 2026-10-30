@@ -128,7 +128,7 @@
 }
 
 .hub-pillar-card:hover {
-  transform: translateY(-8px);
+  transform: none;
   border-color: rgba(0, 103, 56, 0.35);
   box-shadow: 0 20px 40px -15px rgba(0, 103, 56, 0.15), 0 0 0 1px rgba(0, 103, 56, 0.15);
 }
@@ -282,7 +282,7 @@
 
 .hub-pillars-cta-btn:hover {
   background: #007f45;
-  transform: translateY(-3px);
+  transform: none;
   box-shadow: 0 15px 35px -8px rgba(0, 103, 56, 0.45);
 }
 

@@ -45,7 +45,7 @@
 
 .dm-highlight-card:hover {
   border-color: color-mix(in srgb, var(--a) 50%, transparent);
-  transform: translateY(-2px);
+  transform: none;
   background: color-mix(in srgb, var(--a) 6%, var(--s));
 }
 
@@ -109,7 +109,7 @@
 .tools-chip-list span:hover {
   background: color-mix(in srgb, var(--a) 12%, var(--s));
   border-color: var(--a);
-  transform: translateY(-2px);
+  transform: none;
 }
 
 /* =======================================
@@ -291,7 +291,7 @@
 }
 
 .dm-track-card:hover {
-  transform: translateY(-8px);
+  transform: none;
   border-color: color-mix(in srgb, var(--card-accent, var(--a)) 50%, var(--ln));
   box-shadow: 0 20px 40px -15px color-mix(in srgb, var(--card-accent, var(--a)) 20%, transparent);
 }
@@ -448,7 +448,7 @@
 .dm-track-btn:hover {
   background: var(--card-accent, var(--a));
   color: #fff;
-  transform: translateY(-2px);
+  transform: none;
   box-shadow: 0 8px 20px -6px color-mix(in srgb, var(--card-accent, var(--a)) 40%, transparent);
 }
 

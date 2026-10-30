@@ -175,7 +175,7 @@
   border-color: #b6e12b;
   background: #fdfef7;
   color: #0f172a;
-  transform: translateY(-1px);
+  transform: none;
 }
 
 .s-rev-filter-btn.is-active {
@@ -263,7 +263,7 @@
 }
 
 .s-rev-card:hover {
-  transform: translateY(-6px);
+  transform: none;
   border-color: #b6e12b;
   box-shadow: 0 20px 40px -12px rgba(0, 103, 56, 0.16), 0 0 0 1px #b6e12b;
 }

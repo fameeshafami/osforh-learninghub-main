@@ -412,7 +412,7 @@
 
 .ves-chip:hover {
   background: rgba(255, 255, 255, 0.12);
-  transform: translateY(-1px);
+  transform: none;
 }
 
 .ves-chip.ai {

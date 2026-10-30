@@ -190,7 +190,7 @@ h2 {
 }
 
 .btn:hover {
-  transform: translateY(-3px);
+  transform: none;
   background: var(--home-accent-hover);
   color: #ffffff;
   box-shadow: 0 12px 30px -8px var(--lime-deep);
@@ -237,7 +237,7 @@ h2 {
 }
 
 .pre.out {
-  transform: translateY(-100%);
+  transform: none;
   opacity: 0;
 }
 
@@ -279,7 +279,7 @@ h2 {
   inset: 0;
   z-index: 250;
   background: var(--g);
-  transform: translateY(100%);
+  transform: none;
   pointer-events: none;
   display: grid;
   place-items: center;
@@ -290,11 +290,11 @@ h2 {
 }
 
 .cv.active {
-  transform: translateY(0);
+  transform: none;
 }
 
 .cv.exit {
-  transform: translateY(-100%);
+  transform: none;
 }
 
 /* Scroll progress */
@@ -663,13 +663,13 @@ nav .wrap {
   z-index: 2;
   pointer-events: none;
   opacity: 0;
-  transform: translateY(40px) scale(0.95);
+  transform: none;
   transition: opacity 1s ease 0.2s, transform 1s ease 0.2s;
 }
 
 .sl.on .hero-img {
   opacity: 1;
-  transform: translateY(0) scale(1);
+  transform: none;
 }
 
 .hero-img img {
@@ -681,8 +681,8 @@ nav .wrap {
 }
 
 @keyframes heroFloat {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-14px); }
+  0%, 100% { transform: none; }
+  50% { transform: none; }
 }
 
 @media (max-width: 900px) {
@@ -723,7 +723,7 @@ nav .wrap {
 
 .sl .in > * {
   opacity: 0;
-  transform: translateY(34px);
+  transform: none;
   transition: opacity 0.8s, transform 0.8s;
 }
 
@@ -888,7 +888,7 @@ nav .wrap {
 }
 
 .st:hover {
-  transform: translateY(-8px);
+  transform: none;
   border-color: var(--lime);
 }
 
@@ -1071,7 +1071,7 @@ nav .wrap {
 }
 
 .fc:hover {
-  transform: translateY(-6px);
+  transform: none;
   border-color: var(--lime);
   background: var(--s2);
 }
@@ -1134,7 +1134,7 @@ nav .wrap {
 
 .pc:hover {
   border-color: var(--lime);
-  transform: translateY(-5px);
+  transform: none;
 }
 
 .av {
@@ -1196,7 +1196,7 @@ nav .wrap {
 }
 
 .vv:hover {
-  transform: translateY(-8px);
+  transform: none;
   border-color: var(--lime);
 }
 
@@ -1404,7 +1404,7 @@ nav .wrap {
   color: #006738;
   border-color: #006738;
   background: #f0fdf4;
-  transform: translateY(-1px);
+  transform: none;
 }
 
 .tb:hover i {
@@ -1496,7 +1496,7 @@ nav .wrap {
 .tools span:hover {
   background: var(--a);
   color: #04150d;
-  transform: translateY(-3px);
+  transform: none;
 }
 
 .art {
@@ -1581,7 +1581,7 @@ nav .wrap {
 
 .pz:hover {
   border-color: var(--a);
-  transform: translateY(-8px);
+  transform: none;
   box-shadow: 0 26px 50px -30px var(--a);
 }
 
@@ -1641,7 +1641,7 @@ nav .wrap {
 .cr span:hover {
   background: var(--a);
   color: #04150d;
-  transform: translateY(-4px) rotate(-1deg);
+  transform: none;
 }
 
 /* Why Page */
@@ -1686,7 +1686,7 @@ nav .wrap {
 }
 
 .w4 div:hover {
-  transform: translateY(-8px) rotate(-1deg);
+  transform: none;
   background: #F1F5F9;
   border-color: var(--lime);
   color: var(--ink);
@@ -2157,7 +2157,7 @@ footer {
 .so a:hover {
   background: var(--lime);
   color: var(--ink);
-  transform: translateY(-3px);
+  transform: none;
 }
 
 .fb {
@@ -2198,7 +2198,7 @@ footer {
 }
 
 .floating-action-btn:hover {
-  transform: translateY(-3px) scale(1.03);
+  transform: none;
 }
 
 .floating-action-btn.wa-btn {
@@ -2220,7 +2220,7 @@ footer {
 /* Reveal utility */
 .rv {
   opacity: 0;
-  transform: translateY(40px);
+  transform: none;
   transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -2239,7 +2239,7 @@ footer {
 
 @keyframes float {
   50% {
-    transform: translateY(-14px);
+    transform: none;
   }
 }
 
@@ -2258,11 +2258,11 @@ footer {
 @keyframes up {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: none;
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: none;
   }
 }
 
@@ -2274,14 +2274,14 @@ footer {
 
 @keyframes rise {
   0% {
-    transform: translateY(0);
+    transform: none;
     opacity: 0;
   }
   15% {
     opacity: 0.8;
   }
   100% {
-    transform: translateY(-220px);
+    transform: none;
     opacity: 0;
   }
 }

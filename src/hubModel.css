@@ -84,7 +84,7 @@
 
 .hub-root .btn:hover {
   background: var(--accent-soft);
-  transform: translateY(-1px);
+  transform: none;
   color: #fff;
 }
 
@@ -391,7 +391,7 @@
   font: 800 22px var(--display);
   color: #fff;
   opacity: 0;
-  transform: translateY(10px);
+  transform: none;
   transition: opacity 0.4s, transform 0.4s;
   white-space: nowrap;
   overflow: hidden;
@@ -408,7 +408,7 @@
   line-height: 1.5;
   color: #ffffffd1;
   opacity: 0;
-  transform: translateY(10px);
+  transform: none;
   transition: opacity 0.4s, transform 0.4s;
 }
 
@@ -428,7 +428,7 @@
   grid-area: 1/1;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(14px);
+  transform: none;
   transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.5s;
 }
 
@@ -619,7 +619,7 @@
 }
 
 .hub-root .card:hover {
-  transform: translateY(-4px);
+  transform: none;
   box-shadow: 0 20px 40px #14143a21;
 }
 
@@ -837,7 +837,7 @@
 }
 
 .hub-root .rv:hover {
-  transform: translateY(-2px);
+  transform: none;
   box-shadow: 0 12px 30px #14143a14;
 }
 
@@ -896,7 +896,7 @@
 }
 
 .hub-root .ic:hover {
-  transform: translateY(-3px);
+  transform: none;
   border-color: rgba(255, 255, 255, 0.35);
 }
 
@@ -1133,7 +1133,7 @@
   border-radius: 22px;
   background: var(--card);
   opacity: 0;
-  transform: translateY(40px);
+  transform: none;
   transition: opacity 0.7s, transform 0.7s, box-shadow 0.3s, border-color 0.3s;
   transition-delay: calc(var(--card-index) * 90ms);
 }
@@ -1144,7 +1144,7 @@
 }
 
 .hub-root .why-card:hover {
-  transform: translateY(-8px) rotate(-0.4deg);
+  transform: none;
   border-color: #006738;
   box-shadow: 0 22px 40px -18px #1f5a1459;
 }
@@ -1243,7 +1243,7 @@
 
 @keyframes why-float {
   50% {
-    transform: translateY(-6px) rotate(6deg);
+    transform: none;
   }
 }
 
@@ -1352,7 +1352,7 @@
 }
 
 .hub-root .ai-course-card:hover {
-  transform: translateY(-8px);
+  transform: none;
   border-color: #144e2b;
   box-shadow: 0 18px 36px rgba(20, 78, 43, 0.12);
 }

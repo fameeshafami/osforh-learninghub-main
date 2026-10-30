@@ -103,7 +103,7 @@
   background: #006738;
   color: #ffffff;
   border-color: #006738;
-  transform: translateY(-3px);
+  transform: none;
   box-shadow: 0 6px 16px rgba(0, 103, 56, 0.4);
 }
 

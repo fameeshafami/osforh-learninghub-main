@@ -176,7 +176,7 @@
   position: relative;
   overflow: hidden;
   opacity: 0;
-  transform: translateY(40px);
+  transform: none;
   transition: opacity 0.7s, transform 0.7s, box-shadow 0.3s, border-color 0.3s;
   transition-delay: calc(var(--wc-i) * 90ms);
 }
@@ -187,7 +187,7 @@
 }
 
 .wc-card:hover {
-  transform: translateY(-8px) rotate(-0.4deg);
+  transform: none;
   box-shadow: 0 22px 40px -18px rgba(31, 90, 20, 0.35);
   border-color: var(--wc-green);
 }
@@ -225,7 +225,7 @@
 }
 
 @keyframes wc-float {
-  50% { transform: translateY(-6px) rotate(6deg); }
+  50% { transform: none; }
 }
 
 /* ── Card Typography ── */
@@ -288,7 +288,7 @@
 }
 
 .wc-reason-card:hover {
-  transform: translateY(-8px);
+  transform: none;
   border-color: #006738;
   box-shadow: 0 20px 40px -15px rgba(0, 103, 56, 0.18);
 }
