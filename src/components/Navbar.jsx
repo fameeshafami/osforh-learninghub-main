@@ -21,7 +21,6 @@ export default function Navbar() {
   }, [location.pathname]);
 
   const navLinks = [
-    { name: 'Home', path: '/' },
     { name: 'Programs', path: '/programs' },
     { name: 'Why Osforh', path: '/why-osforh' },
     { name: 'Testimonials', path: '/testimonials' },
