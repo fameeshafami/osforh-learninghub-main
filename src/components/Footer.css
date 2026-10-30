@@ -162,7 +162,7 @@
 }
 
 .footer-connect-item svg {
-  color: #38bdf8;
+  color: var(--accent, #A7CB05);
   flex-shrink: 0;
 }
 
@@ -194,7 +194,7 @@
 }
 
 .footer-sub-location svg {
-  color: #ffd83b;
+  color: var(--accent, #A7CB05);
 }
 
 /* Responsive */
