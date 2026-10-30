@@ -2571,6 +2571,7 @@ main#app > section,
 }
 
 .wc-section {
+  margin-top: 48px;
   transform: translateY(-24px);
   will-change: transform;
 }
@@ -2683,6 +2684,7 @@ section.cta {
   }
 
   .wc-section {
+    margin-top: 38px;
     transform: translateY(-20px);
   }
 
@@ -2774,6 +2776,7 @@ section.cta {
   }
 
   .wc-section {
+    margin-top: 32px;
     transform: translateY(-16px);
   }
 
@@ -2865,6 +2868,7 @@ section.cta {
   }
 
   .wc-section {
+    margin-top: 28px;
     transform: translateY(-14px);
   }
 
