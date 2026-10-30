@@ -2540,3 +2540,398 @@ footer {
     display: none;
   }
 }
+
+/* ═════════════════════════════════════════════════════════════════
+   Vertical Section Alignment System
+   Professionally moves each section upward using transform: translateY(-value)
+   Ensures consistent vertical rhythm and balance across Desktop, Tablet & Mobile.
+   ═════════════════════════════════════════════════════════════════ */
+
+/* Base upward alignment for all sections across all pages */
+main#app > section,
+.hub-root > section {
+  transform: translateY(-24px);
+  will-change: transform;
+}
+
+/* 1. Page Headers (Inner Pages) */
+.ph,
+.ph.programs-page-header,
+.ph.why-osforh-page-header,
+.ph.testimonials-page-header {
+  transform: translateY(-16px);
+  will-change: transform;
+}
+
+/* 2. Home Page Specific Sections */
+.home-hero,
+.home-hero .hero {
+  transform: translateY(-20px);
+  will-change: transform;
+}
+
+.wc-section {
+  transform: translateY(-24px);
+  will-change: transform;
+}
+
+section.sec#programs,
+section#programs {
+  transform: translateY(-28px);
+  will-change: transform;
+}
+
+section.s-rev-sec,
+section#testimonials {
+  transform: translateY(-32px);
+  will-change: transform;
+}
+
+section.fac-sec,
+section#facilities {
+  transform: translateY(-36px);
+  will-change: transform;
+}
+
+section.video-stories,
+section#stories {
+  transform: translateY(-38px);
+  will-change: transform;
+}
+
+/* 3. Programs Page Specific Sections */
+.tabs#programs-tabs {
+  transform: translateY(-18px);
+  will-change: transform;
+}
+
+section:has(#pnl),
+#pnl {
+  transform: translateY(-24px);
+  will-change: transform;
+}
+
+section:has(.pr-guide-grid) {
+  transform: translateY(-32px);
+  will-change: transform;
+}
+
+/* 4. Why Osforh Page Specific Sections */
+section:has(.tl) {
+  transform: translateY(-26px);
+  will-change: transform;
+}
+
+section:has(.ct) {
+  transform: translateY(-30px);
+  will-change: transform;
+}
+
+/* 5. Testimonials & Stats Specific Sections */
+section.st {
+  transform: translateY(-34px);
+  will-change: transform;
+}
+
+/* 6. Feature Pillars & Contact Sections */
+section:has(.w4) {
+  transform: translateY(-28px);
+  will-change: transform;
+}
+
+section:has(.cl),
+section:has(.ci) {
+  transform: translateY(-22px);
+  will-change: transform;
+}
+
+section:has(.faq) {
+  transform: translateY(-28px);
+  will-change: transform;
+}
+
+/* 7. Bottom Call to Action Section (All Pages) */
+section.cta {
+  transform: translateY(-40px);
+  will-change: transform;
+}
+
+/* 8. Global Footer Alignment */
+.footer-wrap-container {
+  transform: translateY(-44px);
+  margin-bottom: -44px;
+  will-change: transform;
+}
+
+/* ── Tablet Spacing Alignment (769px to 1024px) ── */
+@media (max-width: 1024px) and (min-width: 769px) {
+  main#app > section,
+  .hub-root > section {
+    transform: translateY(-20px);
+  }
+
+  .ph,
+  .ph.programs-page-header,
+  .ph.why-osforh-page-header,
+  .ph.testimonials-page-header {
+    transform: translateY(-14px);
+  }
+
+  .home-hero,
+  .home-hero .hero {
+    transform: translateY(-16px);
+  }
+
+  .wc-section {
+    transform: translateY(-20px);
+  }
+
+  section.sec#programs,
+  section#programs {
+    transform: translateY(-22px);
+  }
+
+  section.s-rev-sec,
+  section#testimonials {
+    transform: translateY(-26px);
+  }
+
+  section.fac-sec,
+  section#facilities {
+    transform: translateY(-28px);
+  }
+
+  section.video-stories,
+  section#stories {
+    transform: translateY(-30px);
+  }
+
+  .tabs#programs-tabs {
+    transform: translateY(-16px);
+  }
+
+  section:has(#pnl),
+  #pnl {
+    transform: translateY(-20px);
+  }
+
+  section:has(.w4) {
+    transform: translateY(-22px);
+  }
+
+  section:has(.pr-guide-grid) {
+    transform: translateY(-26px);
+  }
+
+  section:has(.tl) {
+    transform: translateY(-22px);
+  }
+
+  section:has(.ct) {
+    transform: translateY(-24px);
+  }
+
+  section:has(.cl),
+  section:has(.ci) {
+    transform: translateY(-18px);
+  }
+
+  section:has(.faq) {
+    transform: translateY(-22px);
+  }
+
+  section.st {
+    transform: translateY(-26px);
+  }
+
+  section.cta {
+    transform: translateY(-32px);
+  }
+
+  .footer-wrap-container {
+    transform: translateY(-34px);
+    margin-bottom: -34px;
+  }
+}
+
+/* ── Mobile Spacing Alignment (up to 768px) ── */
+@media (max-width: 768px) {
+  main#app > section,
+  .hub-root > section {
+    transform: translateY(-16px);
+  }
+
+  .ph,
+  .ph.programs-page-header,
+  .ph.why-osforh-page-header,
+  .ph.testimonials-page-header {
+    transform: translateY(-12px);
+  }
+
+  .home-hero,
+  .home-hero .hero {
+    transform: translateY(-14px);
+  }
+
+  .wc-section {
+    transform: translateY(-16px);
+  }
+
+  section.sec#programs,
+  section#programs {
+    transform: translateY(-18px);
+  }
+
+  section.s-rev-sec,
+  section#testimonials {
+    transform: translateY(-20px);
+  }
+
+  section.fac-sec,
+  section#facilities {
+    transform: translateY(-22px);
+  }
+
+  section.video-stories,
+  section#stories {
+    transform: translateY(-24px);
+  }
+
+  .tabs#programs-tabs {
+    transform: translateY(-12px);
+  }
+
+  section:has(#pnl),
+  #pnl {
+    transform: translateY(-16px);
+  }
+
+  section:has(.w4) {
+    transform: translateY(-18px);
+  }
+
+  section:has(.pr-guide-grid) {
+    transform: translateY(-20px);
+  }
+
+  section:has(.tl) {
+    transform: translateY(-18px);
+  }
+
+  section:has(.ct) {
+    transform: translateY(-20px);
+  }
+
+  section:has(.cl),
+  section:has(.ci) {
+    transform: translateY(-16px);
+  }
+
+  section:has(.faq) {
+    transform: translateY(-18px);
+  }
+
+  section.st {
+    transform: translateY(-20px);
+  }
+
+  section.cta {
+    transform: translateY(-24px);
+  }
+
+  .footer-wrap-container {
+    transform: translateY(-26px);
+    margin-bottom: -26px;
+  }
+}
+
+/* ── Small Mobile Spacing Alignment (up to 480px) ── */
+@media (max-width: 480px) {
+  main#app > section,
+  .hub-root > section {
+    transform: translateY(-14px);
+  }
+
+  .ph,
+  .ph.programs-page-header,
+  .ph.why-osforh-page-header,
+  .ph.testimonials-page-header {
+    transform: translateY(-10px);
+  }
+
+  .home-hero,
+  .home-hero .hero {
+    transform: translateY(-12px);
+  }
+
+  .wc-section {
+    transform: translateY(-14px);
+  }
+
+  section.sec#programs,
+  section#programs {
+    transform: translateY(-15px);
+  }
+
+  section.s-rev-sec,
+  section#testimonials {
+    transform: translateY(-16px);
+  }
+
+  section.fac-sec,
+  section#facilities {
+    transform: translateY(-18px);
+  }
+
+  section.video-stories,
+  section#stories {
+    transform: translateY(-18px);
+  }
+
+  .tabs#programs-tabs {
+    transform: translateY(-10px);
+  }
+
+  section:has(#pnl),
+  #pnl {
+    transform: translateY(-14px);
+  }
+
+  section:has(.w4) {
+    transform: translateY(-15px);
+  }
+
+  section:has(.pr-guide-grid) {
+    transform: translateY(-16px);
+  }
+
+  section:has(.tl) {
+    transform: translateY(-15px);
+  }
+
+  section:has(.ct) {
+    transform: translateY(-16px);
+  }
+
+  section:has(.cl),
+  section:has(.ci) {
+    transform: translateY(-12px);
+  }
+
+  section:has(.faq) {
+    transform: translateY(-14px);
+  }
+
+  section.st {
+    transform: translateY(-16px);
+  }
+
+  section.cta {
+    transform: translateY(-20px);
+  }
+
+  .footer-wrap-container {
+    transform: translateY(-20px);
+    margin-bottom: -20px;
+  }
+}
