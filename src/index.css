@@ -1644,28 +1644,35 @@ nav .wrap {
   transform: none;
 }
 
-/* Why Page */
+/* Why Page & Guide Cards */
 .w4 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
   counter-reset: p;
 }
 
-.w4 div {
+.w4 div,
+.w4 a {
   counter-increment: p;
   position: relative;
-  background: var(--s);
+  background: var(--card, #ffffff);
   border: 1px solid var(--ln);
-  border-radius: 26px;
-  padding: 70px 24px 26px;
-  font: 700 20px Sora;
-  letter-spacing: -0.02em;
-  transition: 0.4s;
+  border-radius: 22px;
+  padding: 70px 24px 24px;
+  font: 700 19px/1.35 Sora, sans-serif;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  transition: all 0.3s ease;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  box-shadow: 0 4px 16px -4px rgba(15, 23, 42, 0.04);
 }
 
-.w4 div::before {
+.w4 div::before,
+.w4 a::before {
   content: "0" counter(p);
   position: absolute;
   top: 18px;
@@ -1680,29 +1687,47 @@ nav .wrap {
   place-items: center;
 }
 
-.w4 div:hover::before {
+.w4 div:hover::before,
+.w4 a:hover::before {
   color: #ffffff !important;
   background: var(--lime);
 }
 
-.w4 div:hover {
+.w4 div:hover,
+.w4 a:hover {
   transform: none;
-  background: #F1F5F9;
+  background: #ffffff;
   border-color: var(--lime);
-  color: var(--ink);
-  box-shadow: 0 16px 32px -12px rgba(15, 23, 42, 0.08);
+  color: var(--lime);
+  box-shadow: 0 16px 36px -10px rgba(0, 103, 56, 0.16);
 }
 
 .w4 small {
   display: block;
-  font: 400 14px Inter;
+  font: 400 14px/1.55 Inter, sans-serif;
   color: var(--mu);
-  margin-top: 8px;
+  margin-top: 10px;
   letter-spacing: 0;
 }
 
-.w4 div:hover small {
+.w4 div:hover small,
+.w4 a:hover small {
   color: var(--ink-soft);
+}
+
+.w4-card-arrow {
+  margin-top: auto;
+  padding-top: 18px;
+  font: 700 13px Sora, sans-serif;
+  color: var(--lime);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: gap 0.2s ease;
+}
+
+.w4 a:hover .w4-card-arrow {
+  gap: 10px;
 }
 
 .tl {

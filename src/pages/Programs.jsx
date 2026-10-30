@@ -173,10 +173,10 @@ export default function Programs() {
                 e.preventDefault();
                 handleSelectTab('dm');
               }}
-              style={{ cursor: 'pointer', textDecoration: 'none', color: 'inherit' }}
             >
               You like ads, numbers and growth
               <small>Choose Digital Marketing &amp; AI and run live campaigns.</small>
+              <span className="w4-card-arrow">Explore program →</span>
             </Link>
             <Link
               className="rv on"
@@ -185,10 +185,10 @@ export default function Programs() {
                 e.preventDefault();
                 handleSelectTab('gd');
               }}
-              style={{ cursor: 'pointer', textDecoration: 'none', color: 'inherit' }}
             >
               You like colour, type and brands
               <small>Choose Graphic Design and finish with a professional design portfolio.</small>
+              <span className="w4-card-arrow">Explore program →</span>
             </Link>
             <Link
               className="rv on"
@@ -197,10 +197,10 @@ export default function Programs() {
                 e.preventDefault();
                 handleSelectTab('wd');
               }}
-              style={{ cursor: 'pointer', textDecoration: 'none', color: 'inherit' }}
             >
               You like building things that work
               <small>Choose Web Development and build responsive sites or full-stack web apps.</small>
+              <span className="w4-card-arrow">Explore program →</span>
             </Link>
             <Link
               className="rv on"
@@ -209,10 +209,10 @@ export default function Programs() {
                 e.preventDefault();
                 handleSelectTab('ve');
               }}
-              style={{ cursor: 'pointer', textDecoration: 'none', color: 'inherit' }}
             >
               You like storytelling, visual effects and reels
               <small>Choose Video Editing &amp; AI and craft cinematic and viral videos.</small>
+              <span className="w4-card-arrow">Explore program →</span>
             </Link>
             <Link
               className="rv on"
@@ -221,10 +221,10 @@ export default function Programs() {
                 e.preventDefault();
                 handleSelectTab('oa');
               }}
-              style={{ cursor: 'pointer', textDecoration: 'none', color: 'inherit' }}
             >
               You like order, planning and people
               <small>Choose Office Administration for a steady professional career.</small>
+              <span className="w4-card-arrow">Explore program →</span>
             </Link>
           </div>
         </div>
