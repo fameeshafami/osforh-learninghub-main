@@ -12,6 +12,7 @@ export default function Contact() {
   return (
     <>
       <PageHeader
+        className="contact-page-header"
         badge="Contact"
         title={
           <>

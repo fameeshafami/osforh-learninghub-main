@@ -611,6 +611,36 @@ nav .wrap {
   }
 }
 
+/* Contact page header background */
+.ph.contact-page-header {
+  background:
+    linear-gradient(90deg, rgba(252, 251, 247, 0.97) 0%, rgba(252, 251, 247, 0.93) 40%, rgba(252, 251, 247, 0.55) 65%, rgba(252, 251, 247, 0.12) 100%),
+    url("./img/WhatsApp Image 2026-10-31 at 9.32.16 AM.jpeg") right center / cover no-repeat,
+    #f5f9ef;
+}
+
+.ph.contact-page-header::before,
+.ph.contact-page-header::after {
+  display: none;
+}
+
+.ph.contact-page-header .orb {
+  display: none;
+}
+
+.ph.contact-page-header .wrap {
+  z-index: 1;
+}
+
+@media (max-width: 900px) {
+  .ph.contact-page-header {
+    background:
+      linear-gradient(180deg, rgba(252, 251, 247, 0.98) 0%, rgba(252, 251, 247, 0.92) 48%, rgba(252, 251, 247, 0.35) 100%),
+      url("./img/WhatsApp Image 2026-10-31 at 9.32.16 AM.jpeg") center 40% / cover no-repeat,
+      #f5f9ef;
+  }
+}
+
 /* Hero Slider */
 .hero {
   min-height: 100svh;
