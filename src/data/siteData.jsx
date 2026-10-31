@@ -1,5 +1,5 @@
 import heroImg from '../img/86439e63-bd27-46b1-a03c-80d972983b26 (1).png';
-import dmImg from '../img/efeb829f-6714-4d79-a7a9-fb955d757d8e.png';
+import dmImg from '../img/ad6743702d8faa96f9b494d2f65250bf.jpg';
 
 export const PROGRAMS = {
   dm: {

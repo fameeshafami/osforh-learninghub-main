@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import dmImg from '../img/efeb829f-6714-4d79-a7a9-fb955d757d8e.png';
+import dmImg from '../img/ad6743702d8faa96f9b494d2f65250bf.jpg';
 import codingImg from '../img/bb92b0eace00fe146e1ea5b000e8b5b8.jpg';
 import videoImg from '../img/fec68bb5292c54a2c3607fb09f06170a.jpg';
 import officeImg from '../img/OIP.webp';
